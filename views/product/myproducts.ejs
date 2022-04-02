@@ -1,0 +1,4 @@
+<%layout('layouts/boilerplate')%>
+<%for(let product of user.products){%>
+    <p><a href="/product/<%=product.id%>"><%=product.name%></a></p>
+<%}%>

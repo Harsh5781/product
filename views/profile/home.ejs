@@ -1,0 +1,18 @@
+<% layout('/layouts/boilerplate')%>
+<h1>Profile</h1>
+<p>Name: <%=user.name%></p>
+<p>Username: <%=user.username%></p>
+<p>Email: <%=user.email%></p>
+<p>Mobile number: <%=user.mobileNum%></p>
+
+<%if(currentUser){%>
+    <div>
+        <a href="/profile/<%=user.id%>/edit">Edit</a>
+    </div>
+    <div>
+        <a href="/profile/updatepassword">Reset password</a>
+    </div>
+    <form action="/profile/<%=user.id%>?_method=DELETE" method="post">
+        <button>Delete</button>
+    </form>
+<%}%>

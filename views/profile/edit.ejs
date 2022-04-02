@@ -1,0 +1,16 @@
+<% layout('/layouts/boilerplate')%>
+<form action="/profile/<%=user.id%>?_method=PUT" method="post">
+    <div>
+        <label for="name">Name: </label>
+        <input type="text" name="name" id="name" placeholder="Enter name" value="<%=user.name%>">
+    </div>
+    <div>
+        <label for="username">Username: </label>
+        <input type="text" name="username" id="username" placeholder="Enter username" value="<%=user.username%>">
+    </div>
+    <div>
+        <label for="mobileNum">Mobile Number: </label>
+        <input type="number" name="mobileNum" id="mobileNum" placeholder="Enter mobile number" value="<%=user.mobileNum%>">
+    </div>
+    <button>Save details</button>
+</form>

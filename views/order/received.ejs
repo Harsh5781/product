@@ -1,0 +1,18 @@
+<%layout('layouts/boilerplate')%>
+<%for(let product of products){%>
+    <%if(Array.isArray(product.orderDetails) && product.orderDetails.length){%>
+        <h2><%=product.name%></h2>
+        <h5>Price: <%=product.price%>, <%=product.size%> <%=product.color%></h5>
+        <%for(let order of product.orderDetails){%>
+        <ul>
+            <li>
+            <p><b> Customer name: </b><%=order.orderedBy.name%></p>
+            <p><b>Customer id: </b><%=order.orderedBy.id%></p>
+            <p><b>Order id: </b><%=order._id%></p>
+            <p><b>Order time: </b><%=order.time%></p>
+            <hr>
+            </li>
+        </ul>
+    <%}%>
+    <%}%>
+<%}%>

@@ -1,0 +1,11 @@
+<% layout('/layouts/boilerplate')%>
+<ul>
+
+    <%for(let product of user.order){%>
+        <li>
+            <h3><%=product.name%></h3>
+            <p>Size: <%=product.size%></p>
+            <p>Color: <%=product.color%></p>
+        </li>
+    <%}%>
+</ul>

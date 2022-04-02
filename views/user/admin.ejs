@@ -1,0 +1,25 @@
+<% layout('/layouts/boilerplate')%>
+<h1>Register as admin</h1>
+<form action="/admin" method="post">
+    <div>
+        <label for="name">Name: </label>
+        <input type="text" name="name" id="name" placeholder="Enter name">
+    </div>
+    <div>
+        <label for="username">Username: </label>
+        <input type="text" name="username" id="username" placeholder="Enter username">
+    </div>
+    <div>
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email" placeholder="Enter email">
+    </div>
+    <div>
+        <label for="mobileNum">Mobile Number: </label>
+        <input type="number" name="mobileNum" id="mobileNum" placeholder="Enter mobile number">
+    </div>
+    <div>
+        <label for="password">Password: </label>
+        <input type="password" name="password" id="password" placeholder="Enter password">
+    </div>
+    <button>Register</button>
+</form>

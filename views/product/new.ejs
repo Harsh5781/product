@@ -1,0 +1,30 @@
+<%layout('layouts/boilerplate')%>
+<h1>New product</h1>
+    <form action="/product" method="post">
+        <div>
+            <label for="name">Name: </label>
+            <input type="text" name="name" id="name" placeholder="Enter name">
+        </div>
+        <div>
+            <label for="price">Price: </label>
+            <input type="text" name="price" id="price" placeholder="Enter price">
+        </div>
+        <div>
+            <label for="size">Size: </label>
+            <select name="size" id="size">
+                <%for(let size of sizes){%>
+                    <option value="<%=size%>"><%=size%></option>
+                <%}%>
+            </select>
+        </div>
+        <div>
+            <label for="color">Color: </label>
+            <select name="color" id="color">
+                <%for(let color of colors){%>
+                    <option value="<%=color%>"><%=color%></option>
+                <%}%>
+            </select>
+        </div>
+        
+        <button>Add</button>
+    </form>
